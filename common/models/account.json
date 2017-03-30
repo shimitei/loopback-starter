@@ -1,0 +1,36 @@
+{
+  "name": "Account",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": false
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "username": {
+      "type": "string",
+      "required": true,
+      "description": "Login name"
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "description": "display name"
+    },
+    "password": {
+      "type": "string",
+      "required": true,
+      "description": "Login password"
+    },
+    "email": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
