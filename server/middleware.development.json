@@ -1,4 +1,15 @@
 {
+  "files": {
+    "loopback#static": [{
+        "name": "client",
+        "params": "$!../client"
+    },
+    {
+        "name": "test",
+        "paths": ["/test"],
+        "params": "$!../test/client"
+    }]
+  },
   "final:after": {
     "strong-error-handler": {
       "params": {

@@ -11,7 +11,7 @@ ds.setMaxListeners(0);
 const Models = function() {
   const result = [];
   for (var key in app.models) {
-    if (app.models[key].getDataSource().name==='postgresql') {
+    if (app.models[key].getDataSource().name === 'postgresql') {
       result.push(key);
     }
   }
@@ -23,4 +23,16 @@ ds.automigrate(Models, function(err) {
     console.error('ERROR automigrate:', err);
     throw err;
   }
+
+  app.models.Account.create([
+    {username: 'admin', name: 'ADMIN', password: 'admin'},
+  ], function(err, users) {
+    if (err) {
+      console.log('ERROR Account create:', err);
+      throw err;
+    }
+
+    console.log('Created Account:\n', users);
+    ds.disconnect();
+  });
 });
