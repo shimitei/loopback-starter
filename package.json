@@ -11,11 +11,11 @@
     "compression": "^1.6.2",
     "cors": "^2.8.3",
     "helmet": "^1.3.0",
+    "loopback": "^3.5.0",
     "loopback-boot": "^2.23.0",
-    "serve-favicon": "^2.4.2",
-    "strong-error-handler": "^1.2.1",
     "loopback-component-explorer": "^4.2.0",
-    "loopback": "^3.5.0"
+    "serve-favicon": "^2.4.2",
+    "strong-error-handler": "^1.2.1"
   },
   "devDependencies": {
     "eslint": "^2.13.1",
@@ -27,5 +27,9 @@
     "url": ""
   },
   "license": "UNLICENSED",
-  "description": "loopback-starter"
+  "description": "loopback-starter",
+  "engines": {
+    "node": ">= 6.10",
+    "npm": ">= 3"
+  }
 }
