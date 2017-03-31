@@ -1,6 +1,6 @@
 {
-  "name": "Account",
-  "base": "User",
+  "name": "RoleGroup",
+  "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": false
@@ -9,33 +9,22 @@
     "TimeStamp": true
   },
   "properties": {
-    "username": {
-      "type": "string",
-      "required": true,
-      "description": "Login name"
-    },
     "name": {
       "type": "string",
       "required": true,
-      "description": "display name"
+      "description": "role name"
     },
-    "password": {
-      "type": "string",
-      "required": true,
-      "description": "Login password"
+    "roleAdmin": {
+      "type": "boolean",
+      "default": false
     },
-    "email": {
-      "type": "string",
-      "required": false
+    "roleUser": {
+      "type": "boolean",
+      "default": false
     }
   },
   "validations": [],
-  "relations": {
-    "roleGroup": {
-      "type": "belongsTo",
-      "model": "RoleGroup"
-    }
-  },
+  "relations": {},
   "acls": [
     {
       "accessType": "*",

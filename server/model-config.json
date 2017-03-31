@@ -40,5 +40,9 @@
   "Account": {
     "dataSource": "psql",
     "public": true
+  },
+  "RoleGroup": {
+    "dataSource": "psql",
+    "public": true
   }
 }

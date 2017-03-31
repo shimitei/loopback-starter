@@ -24,15 +24,29 @@ ds.automigrate(Models, function(err) {
     throw err;
   }
 
-  app.models.Account.create([
-    {username: 'admin', name: 'ADMIN', password: 'admin'},
-  ], function(err, users) {
+  // create admin account
+  app.models.RoleGroup.create([
+    {
+      name: 'admin',
+      roleAdmin: true,
+      roleUser: true,
+    },
+  ], function(err, groups) {
     if (err) {
-      console.log('ERROR Account create:', err);
+      console.error('ERROR RoleGroup create:', err);
       throw err;
     }
+    console.log('Created RoleGroup:', groups);
 
-    console.log('Created Account:\n', users);
-    ds.disconnect();
+    app.models.Account.create([
+      {username: 'admin', name: 'ADMIN', password: 'admin', roleGroupId: 1},
+    ], function(err, users) {
+      if (err) {
+        console.error('ERROR Account create:', err);
+        throw err;
+      }
+      console.log('Created Account:\n', users);
+      ds.disconnect();
+    });
   });
 });
