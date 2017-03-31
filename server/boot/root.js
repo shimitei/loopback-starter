@@ -10,5 +10,7 @@ module.exports = function(server) {
     require('../../test/router/')(server, router);
   }
 
+  server.use(require('../logger/access-logger'));
   server.use(router);
+  server.use(require('../logger/error-logger'));
 };

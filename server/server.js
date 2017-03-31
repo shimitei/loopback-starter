@@ -3,7 +3,7 @@
 const loopback = require('loopback');
 const boot = require('loopback-boot');
 const app = module.exports = loopback();
-const logger = require('./logger');
+const logger = require('./logger/logger');
 
 app.start = function() {
   // start the web server

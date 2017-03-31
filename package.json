@@ -11,6 +11,7 @@
     "compression": "^1.6.2",
     "config": "^1.25.1",
     "cors": "^2.8.3",
+    "express-winston": "^2.3.0",
     "fluent-logger": "^2.3.0",
     "helmet": "^3.5.0",
     "loopback": "^3.5.0",
