@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "compression": "^1.6.2",
+    "config": "^1.25.1",
     "cors": "^2.8.3",
+    "fluent-logger": "^2.3.0",
     "helmet": "^3.5.0",
     "loopback": "^3.5.0",
     "loopback-boot": "^2.23.0",
@@ -17,7 +19,8 @@
     "loopback-connector-postgresql": "^2.7.0",
     "loopback-ds-timestamp-mixin": "^3.4.1",
     "serve-favicon": "^2.4.2",
-    "strong-error-handler": "^2.0.0"
+    "strong-error-handler": "^2.0.0",
+    "winston": "^2.3.1"
   },
   "devDependencies": {
     "eslint": "^3.18.0",

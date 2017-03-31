@@ -1,0 +1,8 @@
+{
+  "fluentTag": "loopback-starter",
+  "fluent": {
+    "host": "localhost",
+    "port": 24224,
+    "timeout": 3.0
+  }
+}
