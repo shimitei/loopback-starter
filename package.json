@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
+    "lb-sdk": "lb-sdk",
+    "sdk": "lb-sdk server/server.js /path/to/client/sdk",
     "lint": "eslint .",
     "start": "node .",
     "posttest": "npm run lint && nsp check"
@@ -24,6 +26,7 @@
     "winston": "^2.3.1"
   },
   "devDependencies": {
+    "@mean-expert/loopback-sdk-builder": "^2.1.0-rc.9",
     "eslint": "^3.18.0",
     "eslint-config-loopback": "^8.0.0",
     "nsp": "^2.6.3"
