@@ -16,10 +16,10 @@
     "express-winston": "^2.3.0",
     "fluent-logger": "^2.3.0",
     "helmet": "^3.5.0",
-    "loopback": "^3.5.0",
+    "loopback": "^3.6.0",
     "loopback-boot": "^2.23.0",
     "loopback-component-explorer": "^4.2.0",
-    "loopback-connector-postgresql": "^2.7.0",
+    "loopback-connector-postgresql": "^3.0.0",
     "loopback-ds-timestamp-mixin": "^3.4.1",
     "serve-favicon": "^2.4.2",
     "strong-error-handler": "^2.0.0",
@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@mean-expert/loopback-sdk-builder": "^2.1.0-rc.9",
-    "eslint": "^3.18.0",
+    "eslint": "^3.19.0",
     "eslint-config-loopback": "^8.0.0",
     "nsp": "^2.6.3"
   },
