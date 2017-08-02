@@ -13,6 +13,10 @@ module.exports = function(app) {
 
     app.models.Account.findById(userId, function(err, user) {
       if (err || !user) return reject();
+      if (user.status !== 1) {
+        // Disable user
+        return reject();
+      }
 
       app.models.RoleGroup.findById(user.roleGroupId, function(err, group) {
         if (err || !group) return reject();

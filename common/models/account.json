@@ -27,6 +27,12 @@
     "email": {
       "type": "string",
       "required": false
+    },
+    "status": {
+      "type": "number",
+      "required": true,
+      "description": "1:enable user 0:disable user）",
+      "default": 1
     }
   },
   "validations": [],

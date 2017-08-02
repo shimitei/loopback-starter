@@ -21,4 +21,26 @@ module.exports = function(Account) {
     },
     {message: 'VALIDATE_ERR_ACCOUNT_USERNAME_PATTERN'}
   );
+
+  // custom login auth
+  Account.beforeRemote('login', function(ctx, modelInstance, next) {
+    // include user data
+    ctx.args.include = ['user'];
+    next();
+  });
+  Account.afterRemote('login', function(ctx, remoteMethodOutput, next) {
+    // Access included objects
+    // https://loopback.io/doc/en/lb3/Include-filter.html#access-included-objects
+    const res = remoteMethodOutput.toJSON();
+    if (res.user.status !== 1) {
+      // fail login
+      const g = require('loopback/lib/globalize');
+      const err = new Error(g.f('login failed'));
+      err.statusCode = 401;
+      err.code = 'LOGIN_FAILED';
+      next(err);
+    } else {
+      next();
+    }
+  });
 };
