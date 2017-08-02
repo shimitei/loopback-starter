@@ -8,7 +8,7 @@ const env = process.env.NODE_ENV || 'development';
 if (env == 'development') {
   transports.push(new (winston.transports.Console)({
     level: 'debug',
-    colorize: true,
+    prettyPrint: true,
   }));
 }
 
