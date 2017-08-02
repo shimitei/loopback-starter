@@ -16,8 +16,8 @@ module.exports = function(Account) {
   const validUsername = /^[a-zA-Z0-9_\-]+$/;
   Account.validate('username',
     function(err) {
-      if (this.username !== undefined &&
-        !validUsername.test(this.username)) err();
+      if (this.username !== undefined
+        && !validUsername.test(this.username)) err();
     },
     {message: 'VALIDATE_ERR_ACCOUNT_USERNAME_PATTERN'}
   );

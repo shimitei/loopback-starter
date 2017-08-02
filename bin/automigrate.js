@@ -10,7 +10,7 @@ ds.setMaxListeners(0);
 
 const Models = function() {
   const result = [];
-  for (var key in app.models) {
+  for (let key in app.models) {
     if (app.models[key].getDataSource().name === 'postgresql') {
       result.push(key);
     }
