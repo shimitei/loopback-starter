@@ -9,6 +9,12 @@
     "TimeStamp": true
   },
   "properties": {
+    "id": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "description": "ID"
+    },
     "username": {
       "type": "string",
       "required": true,
