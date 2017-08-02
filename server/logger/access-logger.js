@@ -1,6 +1,5 @@
 'use strict';
 
-const winston = require('winston');
 const expressWinston = require('express-winston');
 const transports = require('./logger-transports');
 
