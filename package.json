@@ -2,6 +2,7 @@
   "name": "loopback-starter",
   "version": "1.0.0",
   "main": "server/server.js",
+  "private": true,
   "scripts": {
     "lb-sdk": "lb-sdk",
     "sdk": "lb-sdk server/server.js /path/to/client/sdk",
@@ -10,26 +11,26 @@
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
-    "compression": "^1.6.2",
+    "compression": "^1.7.0",
     "config": "^1.26.1",
-    "cors": "^2.8.3",
+    "cors": "^2.8.4",
     "express-winston": "^2.4.0",
-    "fluent-logger": "^2.3.0",
-    "helmet": "^3.6.0",
-    "loopback": "^3.8.0",
-    "loopback-boot": "^2.24.0",
+    "fluent-logger": "^2.4.1",
+    "helmet": "^3.8.1",
+    "loopback": "^3.9.0",
+    "loopback-boot": "^2.26.0",
     "loopback-component-explorer": "^4.2.0",
-    "loopback-connector-postgresql": "^3.0.0",
+    "loopback-connector-postgresql": "^3.0.2",
     "loopback-ds-timestamp-mixin": "^3.4.1",
-    "serve-favicon": "^2.4.2",
-    "strong-error-handler": "^2.1.0",
+    "serve-favicon": "^2.4.3",
+    "strong-error-handler": "^2.2.0",
     "winston": "^2.3.1"
   },
   "devDependencies": {
     "@mean-expert/loopback-sdk-builder": "^2.1.0-rc.10.2",
-    "eslint": "^3.19.0",
+    "eslint": "^4.3.0",
     "eslint-config-loopback": "^8.0.0",
-    "nsp": "^2.6.3"
+    "nsp": "^2.7.0"
   },
   "repository": {
     "type": "",
@@ -38,7 +39,7 @@
   "license": "UNLICENSED",
   "description": "loopback-starter",
   "engines": {
-    "node": ">= 6.10",
-    "npm": ">= 3"
+    "node": ">= 8.2.1",
+    "npm": ">= 5.3.0"
   }
 }
