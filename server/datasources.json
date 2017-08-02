@@ -6,7 +6,6 @@
   "psql": {
     "host": "localhost",
     "port": 5432,
-    "url": "postgres://pguser:pg1234@localhost:5432/lbstart",
     "database": "lbstart",
     "password": "pg1234",
     "name": "psql",
