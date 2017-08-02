@@ -6,6 +6,9 @@
     "validateUpsert": false
   },
   "mixins": {
+    "UniqueConstraint": {
+      "column": "name"
+    },
     "TimeStamp": true,
     "UpdaterId": true
   },
