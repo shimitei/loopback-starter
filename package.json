@@ -8,7 +8,7 @@
     "sdk": "lb-sdk server/server.js /path/to/client/sdk",
     "lint": "eslint .",
     "start": "node .",
-    "testdata": "node bin/migrate.js && node bin/dummy-data.js",
+    "testdata": "node bin/migrate.js && node bin/import-xlsx.js",
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
@@ -25,10 +25,11 @@
     "loopback-ds-timestamp-mixin": "^3.4.1",
     "serve-favicon": "^2.4.3",
     "strong-error-handler": "^2.2.0",
-    "winston": "^2.3.1"
+    "winston": "^2.3.1",
+    "xlsx": "^0.11.0"
   },
   "devDependencies": {
-    "@mean-expert/loopback-sdk-builder": "^2.1.0-rc.10.2",
+    "@mean-expert/loopback-sdk-builder": "^2.1.0-rc.13.1",
     "eslint": "^4.3.0",
     "eslint-config-loopback": "^8.0.0",
     "nsp": "^2.7.0"
