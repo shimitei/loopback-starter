@@ -28,5 +28,6 @@ module.exports = function(app) {
   };
 
   const Role = app.models.Role;
+  Role.registerResolver('roleAdmin', roleResolver);
   Role.registerResolver('roleUser', roleResolver);
 };
