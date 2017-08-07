@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>export csv</title>
+  <link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Account CSV</h1>
+      <form id="token_form" onsubmit="return false;">
+        <div class="form-group">
+          <label for="access_token">access_token : </label>
+          <input type="text" class="form-control" id="access_token" name="access_token">
+        </div>
+      </form>
+      <form id="form1" method="post" enctype="application/json" onsubmit="setToken()">
+        <div class="form-group">
+          <label for="filter">filter : </label>
+          <input type="text" class="form-control" id="filter" name="filter">
+        </div>
+        <button type="submit" class="btn btn-primary">post</button>
+      </form>
+  </div>
+<script type="text/javascript">
+function setToken() {
+	var token = document.getElementById("access_token");
+	var form = document.getElementById("form1");
+	var filter = document.getElementById("filter");
+	form.action = '/api/Accounts/csvexport?access_token=' + token.value + "&filter=" + filter.value;
+}
+</script>
+</body>
+</html>

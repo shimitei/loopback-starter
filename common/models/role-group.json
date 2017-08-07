@@ -10,7 +10,8 @@
       "column": "name"
     },
     "TimeStamp": true,
-    "UpdaterId": true
+    "UpdaterId": true,
+    "CsvExport": true
   },
   "properties": {
     "id": {

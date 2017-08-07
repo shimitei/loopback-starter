@@ -18,19 +18,21 @@
     "express-winston": "^2.4.0",
     "fluent-logger": "^2.4.1",
     "helmet": "^3.8.1",
+    "iconv-lite": "~0.4.18",
     "loopback": "^3.9.0",
     "loopback-boot": "^2.26.0",
     "loopback-component-explorer": "^4.2.0",
     "loopback-connector-postgresql": "^3.0.2",
     "loopback-ds-timestamp-mixin": "^3.4.1",
+    "moment": "^2.18.1",
     "serve-favicon": "^2.4.3",
     "strong-error-handler": "^2.2.0",
     "winston": "^2.3.1",
-    "xlsx": "^0.11.0"
+    "xlsx": "^0.11.1"
   },
   "devDependencies": {
-    "@mean-expert/loopback-sdk-builder": "^2.1.0-rc.13.1",
-    "eslint": "^4.3.0",
+    "@mean-expert/loopback-sdk-builder": "^2.1.0-rc.13.2",
+    "eslint": "^4.4.0",
     "eslint-config-loopback": "^8.0.0",
     "nsp": "^2.7.0"
   },
