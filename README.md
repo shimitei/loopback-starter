@@ -1,5 +1,7 @@
 # loopback-starter
 
+## Dependencies
+
 - Node.js v8.x
 - LoopBack 3.x
 - PostgreSQL
