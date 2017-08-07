@@ -4,6 +4,9 @@ const loopback = require('loopback');
 const boot = require('loopback-boot');
 const app = module.exports = loopback();
 const logger = require('./logger/logger');
+const path = require('path');
+app.set('view engine', 'ejs');
+app.set('views', path.resolve(__dirname, 'views'));
 
 app.start = function() {
   // start the web server

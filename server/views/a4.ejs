@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>A4</title>
+	<style type="text/css" media="screen,print">
+@page { size: A4; margin: 0; }
+body {
+  margin: 0;
+  counter-reset: sheet;
+}
+.sheet {
+  margin: 0;
+  position: relative;
+  box-sizing: border-box;
+  page-break-after: always;
+}
+.sheet::after {
+  position: absolute;
+  top: 280mm;
+  right: 105mm;
+  counter-increment: sheet;
+  content: counter(sheet);
+}
+.pagebox {
+  width: 210mm;
+  height: 296mm;
+  padding: 0mm;
+  border: solid;
+}
+
+/** Paper sizes **/
+body.A4.sheet { width: 210mm; height: 296mm }
+
+/** Padding area **/
+.sheet.padding-10mm { padding: 10mm }
+.sheet.padding-15mm { padding: 15mm }
+.sheet.padding-20mm { padding: 20mm }
+.sheet.padding-25mm { padding: 25mm }
+
+/** For screen preview **/
+@media screen {
+  body { background: #e0e0e0 }
+  .sheet {
+    background: white;
+    box-shadow: 0 .5mm 2mm rgba(0,0,0,.3);
+    margin: 5mm;
+  }
+}
+
+/** Fix for Chrome issue #273306 **/
+@media print {
+  body.A4 { width: 210mm }
+}
+	</style>
+</head>
+<body class="A4">
+  <!-- Each sheet element should have the class "sheet" -->
+  <!-- "padding-**mm" is optional: you can set 10, 15, 20 or 25 -->
+<% for (var message of list) { %>
+  <div class="pagebox">
+    <section class="sheet padding-10mm">
+      <%= message %>
+    </section>
+  </div>
+<% } %>
+
+</body>
+</html>
